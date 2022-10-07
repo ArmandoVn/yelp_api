@@ -14,6 +14,7 @@ WORKDIR /src
 COPY ./Pipfile ./Pipfile.lock /src/
 RUN pipenv install
 
+COPY ./.env /src
 COPY ./yelp /src/yelp
 WORKDIR /src/yelp
 
