@@ -281,5 +281,7 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/django,visualstudiocode,python
 
 # Extra files
-.data/
-._data/
+data/
+_data/
+*subset_2/
+.DS_Store

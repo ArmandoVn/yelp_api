@@ -31,8 +31,13 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+YELP_APPS = [
+    "user",
+    "review",
+    "business",
+]
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+INSTALLED_APPS = DJANGO_APPS + YELP_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
