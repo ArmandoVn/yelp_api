@@ -11,6 +11,8 @@ psycopg2-binary = "*"
 django-extensions = "*"
 djangorestframework-simplejwt = "*"
 drf-yasg = "*"
+factory-boy = "*"
+faker = "*"
 
 [dev-packages]
 

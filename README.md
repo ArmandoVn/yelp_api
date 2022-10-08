@@ -77,7 +77,40 @@ Finally run the project:
 ```bash
   docker-compose up
 ```
+## Components description
+
+The project has three main apps:
+- business
+- review
+- user
+One for each model in the subset. This allows you to more easily scale the code and make it more readable.
+
+
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  docker-compose run web python manage.py test .
+```
+
+## Documentation
+Swagger has been integrated, so if you want to know all the available endpoints, run the project and access to:
+
+[http://localhost:8000/api/doc/](http://localhost:8000/api/doc/)
+
+If you prefer to use Postman, I created this collection so you can play around with endpoints:
+
+[Yelp Collecion](http://localhost:8000/api/doc/)
+
 ## Authors
 
 - [@ArmandoVn](https://github.com/ArmandoVn)
 
+
+## Related
+
+Here are some intresting libraries:
+
+- [Faker](https://faker.readthedocs.io/en/master/providers/faker.providers.python.html)
+- [factory_boy](https://factoryboy.readthedocs.io/en/stable/introduction.html)
