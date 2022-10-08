@@ -40,9 +40,9 @@ YELP_APPS = [
 ]
 
 DJANGO_APPS = [
-    'django_extensions',
-    'rest_framework',
     'drf_yasg',
+    'rest_framework',
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
