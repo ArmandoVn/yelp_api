@@ -4,10 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "~=4.1"
-djangorestframework = "~=3.12"
-django-filter = "~=22.1"
-psycopg2 = "~=2.8.5"
+django = "*"
+djangorestframework = "*"
+django-filter = "*"
+psycopg2-binary = "*"
+django-extensions = "*"
 
 [dev-packages]
 

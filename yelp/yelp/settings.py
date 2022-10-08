@@ -32,12 +32,13 @@ ALLOWED_HOSTS = []
 
 # Application definition
 YELP_APPS = [
-    "user",
-    "review",
-    "business",
+    'user',
+    'review',
+    'business',
 ]
 
 DJANGO_APPS = [
+    'django_extensions',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -124,7 +125,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

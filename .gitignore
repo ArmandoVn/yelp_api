@@ -285,3 +285,6 @@ data/
 _data/
 *subset_2/
 .DS_Store
+*user100k.json
+*business10k.json
+*review1M.json
