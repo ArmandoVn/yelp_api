@@ -28,6 +28,7 @@ class YelpUserListSerializer(serializers.ModelSerializer):
             "compliment_writer",
             "compliment_photos",
         )
+        read_only_fields = fields
     
 class YelpUserDetailSerializer(serializers.ModelSerializer):
     class Meta:
@@ -56,3 +57,4 @@ class YelpUserDetailSerializer(serializers.ModelSerializer):
             "compliment_writer",
             "compliment_photos",
         )
+        read_only_fields = fields
