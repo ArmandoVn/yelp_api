@@ -15,36 +15,38 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
 
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 schema_view = get_schema_view(
-   openapi.Info(
-      title="Yell API",
-      default_version='v1',
-      description="In this section you can find all the available endpoints.",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="armandovn.proteco@gmail.com"),
-      license=openapi.License(name="BSD License"),
-   ),
-   public=True,
-   permission_classes=[permissions.AllowAny],
+    openapi.Info(
+        title="Yell API",
+        default_version="v1",
+        description="In this section you can find all the available endpoints.",
+        terms_of_service="https://www.google.com/policies/terms/",
+        contact=openapi.Contact(email="armandovn.proteco@gmail.com"),
+        license=openapi.License(name="BSD License"),
+    ),
+    public=True,
+    permission_classes=[permissions.AllowAny],
 )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('api/', 
-        include([
-            path('', include(('api.urls', 'api'), namespace='api')),
-            path('doc/', schema_view.with_ui('swagger', cache_timeout=0), name="swagger-schema"),
-        ])
+    path("admin/", admin.site.urls),
+    path("api-auth/", include("rest_framework.urls")),
+    path(
+        "api/",
+        include(
+            [
+                path("", include(("api.urls", "api"), namespace="api")),
+                path(
+                    "doc/",
+                    schema_view.with_ui("swagger", cache_timeout=0),
+                    name="swagger-schema",
+                ),
+            ]
+        ),
     ),
 ]

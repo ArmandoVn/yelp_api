@@ -4,10 +4,11 @@ from ..models import Review
 from user.models import YelpUser
 from business.models import Business
 
+
 def run():
-    with open('review/scripts/review1M.json', 'r') as reader:
+    with open("review/scripts/review1M.json", "r") as reader:
         while True:
-            line = reader.readline()    
+            line = reader.readline()
             if not line:
                 break
             data = json.loads(line)

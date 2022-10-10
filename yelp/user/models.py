@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class YelpUser(models.Model):
     user_id = models.CharField(max_length=22, primary_key=True)
     name = models.CharField(max_length=200)
@@ -25,4 +26,3 @@ class YelpUser(models.Model):
     compliment_funny = models.PositiveIntegerField(default=0)
     compliment_writer = models.PositiveIntegerField(default=0)
     compliment_photos = models.PositiveIntegerField(default=0)
-

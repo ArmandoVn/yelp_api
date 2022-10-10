@@ -58,7 +58,7 @@ Create the containers and install all necesary dependencies to run the project:
 Create all migrations:
 ```bash
   docker-compose run web python manage.py migrate
-``` 
+```
 
 Load data, it's necessary execute the following commands in order:
 ```bash

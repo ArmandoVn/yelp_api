@@ -6,88 +6,88 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('user', '0003_alter_yelpuser_yelping_since'),
+        ("user", "0003_alter_yelpuser_yelping_since"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_cool',
+            model_name="yelpuser",
+            name="compliment_cool",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_cute',
+            model_name="yelpuser",
+            name="compliment_cute",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_funny',
+            model_name="yelpuser",
+            name="compliment_funny",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_hot',
+            model_name="yelpuser",
+            name="compliment_hot",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_list',
+            model_name="yelpuser",
+            name="compliment_list",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_more',
+            model_name="yelpuser",
+            name="compliment_more",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_note',
+            model_name="yelpuser",
+            name="compliment_note",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_photos',
+            model_name="yelpuser",
+            name="compliment_photos",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_plain',
+            model_name="yelpuser",
+            name="compliment_plain",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_profile',
+            model_name="yelpuser",
+            name="compliment_profile",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='compliment_writer',
+            model_name="yelpuser",
+            name="compliment_writer",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='cool',
+            model_name="yelpuser",
+            name="cool",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='fans',
+            model_name="yelpuser",
+            name="fans",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='funny',
+            model_name="yelpuser",
+            name="funny",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='review_count',
+            model_name="yelpuser",
+            name="review_count",
             field=models.PositiveIntegerField(default=0),
         ),
         migrations.AlterField(
-            model_name='yelpuser',
-            name='useful',
+            model_name="yelpuser",
+            name="useful",
             field=models.PositiveIntegerField(default=0),
         ),
     ]

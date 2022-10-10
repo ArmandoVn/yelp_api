@@ -5,11 +5,14 @@ from user.models import YelpUser
 
 fake = Faker()
 
+
 class YelpUserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = YelpUser
 
-    user_id = factory.LazyAttribute(lambda _: fake.bothify(text='??????????????????????'))
+    user_id = factory.LazyAttribute(
+        lambda _: fake.bothify(text="??????????????????????")
+    )
     name = factory.LazyAttribute(lambda _: fake.name())
     review_count = factory.LazyAttribute(lambda _: fake.random_digit())
     yelping_since = factory.LazyAttribute(lambda _: fake.date_time_ad())
@@ -17,8 +20,10 @@ class YelpUserFactory(factory.django.DjangoModelFactory):
     funny = factory.LazyAttribute(lambda _: fake.random_digit())
     cool = factory.LazyAttribute(lambda _: fake.random_digit())
     fans = factory.LazyAttribute(lambda _: fake.random_digit())
-    friends = factory.LazyAttribute(lambda _: fake.bothify(text='??????????????????????'))
-    elite = factory.LazyAttribute(lambda _: fake.bothify(text='??????????????????????'))
+    friends = factory.LazyAttribute(
+        lambda _: fake.bothify(text="??????????????????????")
+    )
+    elite = factory.LazyAttribute(lambda _: fake.bothify(text="??????????????????????"))
     average_stars = factory.LazyAttribute(lambda _: fake.pyfloat(positive=True))
     compliment_hot = factory.LazyAttribute(lambda _: fake.random_digit())
     compliment_more = factory.LazyAttribute(lambda _: fake.random_digit())

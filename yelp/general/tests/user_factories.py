@@ -9,6 +9,7 @@ from django.contrib.auth.hashers import make_password
 
 fake = Faker()
 
+
 class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User

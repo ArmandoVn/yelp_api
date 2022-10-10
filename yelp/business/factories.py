@@ -5,11 +5,14 @@ from business.models import Business
 
 fake = Faker()
 
+
 class BusinessFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Business
 
-    business_id = factory.LazyAttribute(lambda _: fake.bothify(text='??????????????????????'))
+    business_id = factory.LazyAttribute(
+        lambda _: fake.bothify(text="??????????????????????")
+    )
     name = factory.LazyAttribute(lambda _: fake.name())
     address = factory.LazyAttribute(lambda _: fake.street_address())
     city = factory.LazyAttribute(lambda _: fake.city())

@@ -16,21 +16,21 @@ class BusinessViewSet(GenericViewSet, ListModelMixin, RetrieveModelMixin):
     max_page_size = 1000
     filter_backends = [filters.OrderingFilter]
     ordering_fields = [
-        'name',
-        'address',
-        'city',
-        'state',
-        'postal_code',
-        'latitude',
-        'longitude',
-        'stars',
-        'review_count',
-        'is_open',
+        "name",
+        "address",
+        "city",
+        "state",
+        "postal_code",
+        "latitude",
+        "longitude",
+        "stars",
+        "review_count",
+        "is_open",
     ]
-    ordering = ['-stars']
+    ordering = ["-stars"]
 
     def get_serializer_class(self):
-        if self.action in ['retrieve']:
+        if self.action in ["retrieve"]:
             self.serializer_class = BusinessDetailSerializer
         return super().get_serializer_class()
 
@@ -44,30 +44,30 @@ class BusinessViewSet(GenericViewSet, ListModelMixin, RetrieveModelMixin):
         return Response(serializer.data)
 
     def chose_orde_by(self, queryset, order_by: str):
-        if order_by == 'stars':
-            return queryset.order_by('stars')
-        if order_by == '-stars':
-            return queryset.order_by('-stars')
-        if order_by == 'useful':
-            return queryset.order_by('useful')
-        if order_by == '-useful':
-            return queryset.order_by('-useful')
-        if order_by == 'funny':
-            return queryset.order_by('funny')
-        if order_by == '-funny':
-            return queryset.order_by('-funny')
-        if order_by == 'cool':
-            return queryset.order_by('cool')
-        if order_by == '-cool':
-            return queryset.order_by('-cool')
+        if order_by == "stars":
+            return queryset.order_by("stars")
+        if order_by == "-stars":
+            return queryset.order_by("-stars")
+        if order_by == "useful":
+            return queryset.order_by("useful")
+        if order_by == "-useful":
+            return queryset.order_by("-useful")
+        if order_by == "funny":
+            return queryset.order_by("funny")
+        if order_by == "-funny":
+            return queryset.order_by("-funny")
+        if order_by == "cool":
+            return queryset.order_by("cool")
+        if order_by == "-cool":
+            return queryset.order_by("-cool")
 
     @action(detail=True, serializer_class=ReviewListSerializer)
     def reviews(self, request, pk, *args, **kwargs):
         instance = self.get_object()
         reviews = instance.reviews.all()
-        ordering = request.query_params.get('ordering')
+        ordering = request.query_params.get("ordering")
         if ordering:
             reviews = self.chose_orde_by(reviews, ordering)
         else:
-            reviews = reviews.order_by('-date')
+            reviews = reviews.order_by("-date")
         return self.reviews_response(reviews=reviews)
