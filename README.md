@@ -77,6 +77,10 @@ Finally run the project:
 ```bash
   docker-compose up
 ```
+## Database Diagram
+
+[Database diagram](https://drive.google.com/file/d/1j0dQKmtDY7zaV1Tr0lDWb_ar_MDUq5tI/view?usp=sharing)
+
 ## Components description
 
 The project has three main apps:

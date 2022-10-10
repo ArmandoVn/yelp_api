@@ -4,6 +4,8 @@ from .models import Business
 
 
 class BusinessListSerializer(serializers.ModelSerializer):
+    """Use this serializer when you want to list Business model."""
+
     class Meta:
         model = Business
         fields = (
@@ -23,6 +25,8 @@ class BusinessListSerializer(serializers.ModelSerializer):
 
 
 class BusinessDetailSerializer(serializers.ModelSerializer):
+    """Use this serializer when you want to get the detail of Business object."""
+
     class Meta:
         model = Business
         fields = (

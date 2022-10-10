@@ -4,6 +4,8 @@ from .models import Review
 
 
 class ReviewListSerializer(serializers.ModelSerializer):
+    """Use this serializer when you want to list Review model."""
+
     class Meta:
         model = Review
         fields = (
@@ -21,6 +23,8 @@ class ReviewListSerializer(serializers.ModelSerializer):
 
 
 class ReviewDetailSerializer(serializers.ModelSerializer):
+    """Use this serializer when you want to get the detail of Review object."""
+
     class Meta:
         model = Review
         fields = (

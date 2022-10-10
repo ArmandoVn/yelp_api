@@ -4,6 +4,8 @@ from .models import YelpUser
 
 
 class YelpUserListSerializer(serializers.ModelSerializer):
+    """Use this serializer when you want to list YelpUser model."""
+
     class Meta:
         model = YelpUser
         fields = (
@@ -33,6 +35,8 @@ class YelpUserListSerializer(serializers.ModelSerializer):
 
 
 class YelpUserDetailSerializer(serializers.ModelSerializer):
+    """Use this serializer when you want to get the detail of Yelpuser object."""
+
     class Meta:
         model = YelpUser
         fields = (
